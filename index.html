@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101723">
+  <meta name="description" content="책임과 용기, 친절에 관한 오리지널 한 줄을 모아 보는 개인용 명언집">
+  <title>Spider Quotes — 오늘의 한 줄</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles/spider-quotes.css">
+  <script type="module" src="./src/spider-quotes.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header class="topbar">
+    <a class="brand" href="#/today" aria-label="Spider Quotes 오늘로 이동"><span class="brand-mark" aria-hidden="true">✳</span><span>SPIDER <b>QUOTES</b></span></a>
+    <button class="icon-button" id="settings-open" aria-label="설정 열기" title="설정">⚙</button>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="view" data-view="today" aria-labelledby="today-heading" hidden>
+      <div class="hero hero--today"><div class="eyebrow"><span class="live-dot"></span> DAILY INSPIRATION</div><p id="today-date" class="date-line"></p><h1 id="today-heading">오늘의 한 줄</h1><div id="today-card"></div>
+        <div class="hero-actions"><button class="button button--light" id="today-favorite" aria-pressed="false">☆ <span>저장</span></button><button class="button button--glass" id="today-share">↗ <span>공유</span></button></div>
+        <a class="text-link" href="#/quotes">문장 더 둘러보기 <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="section-intro"><span class="eyebrow">A LITTLE COURAGE, EVERY DAY</span><p>오늘의 작은 선택이<br><strong>내일의 도시를 바꿉니다.</strong></p></div>
+    </section>
+    <section class="view" data-view="quotes" aria-labelledby="quotes-heading" hidden>
+      <div class="page-heading"><span class="eyebrow">THE COLLECTION</span><h1 id="quotes-heading">문장 모아보기</h1><p>마음에 닿는 문장을 찾아보세요.</p></div>
+      <label class="search-box"><span aria-hidden="true">⌕</span><span class="visually-hidden">문장 검색</span><input id="search" type="search" placeholder="문장, 주제, 태그 검색" autocomplete="off"></label>
+      <div id="categories" class="chips" aria-label="카테고리 필터"></div><p id="result-count" class="result-count" role="status"></p><div id="quote-list" class="quote-list"></div>
+      <div id="no-results" class="empty-state" hidden><span aria-hidden="true">◎</span><p>검색 결과가 없습니다.</p><button class="text-button" id="clear-search">검색 지우기</button></div>
+    </section>
+    <section class="view" data-view="favorites" aria-labelledby="favorites-heading" hidden>
+      <div class="page-heading"><span class="eyebrow">YOUR SAVED LINES</span><h1 id="favorites-heading">즐겨찾기</h1><p>다시 읽고 싶은 문장을 모았어요.</p></div><div id="favorite-list" class="quote-list"></div>
+      <div id="favorites-empty" class="empty-state" hidden><span aria-hidden="true">☆</span><p>아직 저장한 문장이 없어요.</p><small>문장 옆 별표를 눌러 담아 보세요.</small><a class="button button--primary" href="#/quotes">문장 둘러보기</a></div>
+    </section>
+    <section class="view" data-view="detail" aria-labelledby="detail-heading" hidden>
+      <button class="back-link" id="detail-back">← 돌아가기</button><div id="detail-card"></div>
+    </section>
+    <section class="view" data-view="settings" aria-labelledby="settings-heading" hidden>
+      <div class="page-heading"><span class="eyebrow">PREFERENCES</span><h1 id="settings-heading">설정</h1></div>
+      <section class="settings-panel"><h2>화면 테마</h2><fieldset class="theme-options"><legend class="visually-hidden">테마 선택</legend><label><input type="radio" name="theme" value="system"><span>기기 설정</span></label><label><input type="radio" name="theme" value="light"><span>밝게</span></label><label><input type="radio" name="theme" value="dark"><span>어둡게</span></label></fieldset></section>
+      <section class="settings-panel"><h2>앱 정보</h2><p>Spider Quotes는 책임, 용기, 친절을 주제로 새로 쓴 오리지널 문장을 담은 개인용 명언집입니다.</p><p class="fine-print">스파이더맨의 공식 앱이 아니며 권리자와 제휴·승인 관계가 없습니다. 캐릭터 이미지나 작품 대사를 수록하지 않습니다.</p></section>
+    </section>
+  </main>
+  <nav class="bottom-nav" aria-label="주요 메뉴"><a href="#/today" data-nav="today"><span aria-hidden="true">⌂</span><small>오늘</small></a><a href="#/quotes" data-nav="quotes"><span aria-hidden="true">▤</span><small>모아보기</small></a><a href="#/favorites" data-nav="favorites"><span aria-hidden="true">♡</span><small>즐겨찾기</small></a></nav>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

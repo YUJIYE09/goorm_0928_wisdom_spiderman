@@ -1,0 +1,16 @@
+{
+  "name": "Spider Quotes — 오늘의 한 줄",
+  "short_name": "Spider Quotes",
+  "description": "책임과 용기, 친절에 관한 오리지널 한 줄을 모아 보는 개인용 명언집",
+  "lang": "ko",
+  "dir": "ltr",
+  "start_url": "./#/today",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0e1520",
+  "theme_color": "#101723",
+  "icons": [
+    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
